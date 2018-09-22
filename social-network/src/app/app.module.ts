@@ -11,17 +11,37 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 //Toolbar
 import {MatToolbarModule} from '@angular/material/toolbar';
+
+//Firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+import { environment } from '../environments/environment';
+import { AuthService } from './auth.service';
+import { AuthFormComponent } from './auth-form/auth-form.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthFormComponent,
+    AuthFormComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
