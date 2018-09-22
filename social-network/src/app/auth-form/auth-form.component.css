@@ -12,6 +12,11 @@
   padding-bottom: 3%;
 }
 
+.btn-logout {
+  float:right;
+  margin-right: 30px;
+}
+
 .letter-i {
   color: red;
   display: inline-block;
