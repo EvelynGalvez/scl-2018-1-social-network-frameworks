@@ -1,15 +1,15 @@
 .form-data {
   border-radius: 3%;
   background-color: #f4e1d0;
-  margin-top: 10%;
+  margin-top: 2%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 100%;
   z-index: 3;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 2%;
+  padding-bottom: 0.6%;
 }
 
 .btn-logout {
@@ -68,4 +68,9 @@
 .title-sn {
   font-family: 'Fontdiner Swanky', cursive;
   font-size: 250%;
+}
+
+.img-init {
+  position: absolute;
+  bottom: 0px;
 }

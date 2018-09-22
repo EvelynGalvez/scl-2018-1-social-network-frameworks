@@ -1,0 +1,16 @@
+.welcome {
+  color: black;
+  text-align: end;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+}
+
+.bienvenido {
+  display: inline;
+}
+
+.btn-logout {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 10px;
+}

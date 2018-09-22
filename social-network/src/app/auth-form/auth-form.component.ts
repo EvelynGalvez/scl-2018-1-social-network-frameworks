@@ -60,18 +60,5 @@ export class AuthFormComponent implements OnInit {
       });
   }
 
-  onLogout() {
-    this.authService.logout()
-      .then(() => {
-        //Logout exitoso, adios usuario!
-      })
-      .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
-        this.snackBar.open('Error al tratar de cerrar sesión, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
-          , {
-            duration: 3000
-          });
-      });
-  }
+
 }

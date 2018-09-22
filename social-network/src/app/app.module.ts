@@ -22,14 +22,21 @@ import { AuthFormComponent } from './auth-form/auth-form.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { PublishComponent } from './publish/publish.component';
+
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthFormComponent,
-    AuthFormComponent
+    AuthFormComponent,
+    WelcomeComponent,
+    PublishComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
