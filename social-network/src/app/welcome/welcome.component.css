@@ -1,16 +1,23 @@
 .welcome {
   color: black;
-  text-align: end;
   font-family: 'Roboto', sans-serif;
   margin-top: 10px;
 }
 
 .bienvenido {
-  display: inline;
+  display: inline-block;
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
 
-.btn-logout {
-  display: inline;
-  margin-left: 20px;
-  margin-right: 10px;
+.right {
+  position: relative;
+  left: 3%;
+  top: 10px;
+}
+
+.container {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
 }

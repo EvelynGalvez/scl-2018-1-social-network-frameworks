@@ -1,4 +1,6 @@
-<div class="welcome" *ngIf="authService.user | async">
-    <p class="bienvenido">Bienvenido : {{((authService.user | async) || {}).email}}</p>
-    <button class="btn btn-dark btn-logout" type="button" (click)="onLogout()">Logout</button>
+<div class="container welcome" *ngIf="authService.user | async">
+    <div class="right">
+      <p class="bienvenido">Bienvenido : {{((authService.user | async) || {}).email}}</p>
+    </div>
 </div>
+
