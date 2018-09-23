@@ -12,9 +12,9 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 export class PostFormComponent implements OnInit {
 
   publish: FormGroup;
-  publishtList$ :AngularFireList<any>; //esto es del tipo observable de firebase
+  publishList$ :AngularFireList<any>; //esto es del tipo observable de firebase
   constructor(private formBuilder: FormBuilder, private database:AngularFireDatabase) { 
-    this.createPostForm(); 
+    this.createPublish(); 
     //hacemos una consulta a la base de datos
     this.publishList$ = this.database.list('/publish'); 
   }
