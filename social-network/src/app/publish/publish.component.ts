@@ -9,7 +9,7 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
   templateUrl: './publish.component.html',
   styleUrls: ['./publish.component.css']
 })
-export class PostFormComponent implements OnInit {
+export class PublishComponent implements OnInit {
 
   publish: FormGroup;
   publishList$ :AngularFireList<any>; //esto es del tipo observable de firebase

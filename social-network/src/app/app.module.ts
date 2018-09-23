@@ -69,7 +69,7 @@ const appRoutes: Routes = [ // ruta + componente
     MatMenuModule,
     MatIconModule,
     RouterModule.forRoot(appRoutes),
-    MatCardModule
+    MatCardModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
