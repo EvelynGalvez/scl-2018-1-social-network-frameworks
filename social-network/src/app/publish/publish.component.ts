@@ -1,30 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
+//import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 
 @Component({
   selector: 'app-publish',
   templateUrl: './publish.component.html',
   styleUrls: ['./publish.component.css']
 })
-export class PublishComponent implements OnInit {
+export class PostFormComponent implements OnInit {
 
-  constructor(private authService: AuthService, public snackBar: MatSnackBar) { }
+  publish: FormGroup;
+  publishtList$ :AngularFireList<any>; //esto es del tipo observable de firebase
+  constructor(private formBuilder: FormBuilder, private database:AngularFireDatabase) { 
+    this.createPostForm(); 
+    //hacemos una consulta a la base de datos
+    this.publishList$ = this.database.list('/publish'); 
+  }
 
   ngOnInit() {
   }
-  onLogout() {
-    this.authService.logout()
-      .then(() => {
-        //Logout exitoso, adios usuario!
-      })
-      .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
-        this.snackBar.open('Error al tratar de cerrar sesión, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
-          , {
-            duration: 3000
-          });
-      });
+
+  createPublish() {
+    this.publish = this.formBuilder.group({
+      image: ['', Validators.required],
+      description: ['', Validators.required]
+    });
   }
+
+  addPublish() { 
+    const newPublish = { 
+      image: this.publish.value.image,
+      description: this.publish.value.description,
+    };
+
+    this.publishList$.push(newPublish);//esto agrega un nuevo post
+    this.publish.reset();
+  }
+
 }
