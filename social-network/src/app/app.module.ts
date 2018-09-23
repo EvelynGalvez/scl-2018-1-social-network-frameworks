@@ -22,6 +22,28 @@ import { FormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent } from './menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
+import { FeedingComponent } from './feeding/feeding.component';
+import { MatCardModule } from '@angular/material/card';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [ // ruta + componente
+  {
+    path : '',//si no pone nada es la ruta principal
+    component : WelcomeComponent
+  },
+  {
+    path: 'login',
+    component: WelcomeComponent
+  },
+  {
+    path: 'alimentacion',
+    component: FeedingComponent
+  },
+  {
+    path: 'muro',
+    component: PublishComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +52,8 @@ import { MatIconModule } from '@angular/material/icon';
     AuthFormComponent,
     WelcomeComponent,
     PublishComponent,
-    MenuComponent
+    MenuComponent,
+    FeedingComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +67,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     FormsModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule.forRoot(appRoutes),
+    MatCardModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

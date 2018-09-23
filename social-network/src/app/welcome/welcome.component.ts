@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-welcome',
@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(private authService: AuthService, public snackBar: MatSnackBar) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
