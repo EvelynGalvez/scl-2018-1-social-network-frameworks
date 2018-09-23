@@ -1,16 +1,41 @@
 .welcome {
   color: black;
-  text-align: end;
   font-family: 'Roboto', sans-serif;
   margin-top: 10px;
 }
 
-.bienvenido {
-  display: inline;
+.btn-logout {
+  margin-left: 20px;
+  margin-right: 0px;
+  float: right;
+  position: relative;
+  right: 10px;
+  top: 0px;
 }
 
-.btn-logout {
-  display: inline;
-  margin-left: 20px;
-  margin-right: 10px;
+.bienvenido {
+  display: inline-block;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+  position: relative;
+  left: 3%;
+  top: 10px;
+}
+
+.center {
+  display: inline-block;
+}
+
+.container {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
