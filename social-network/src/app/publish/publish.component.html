@@ -20,4 +20,24 @@
   </div>
 </form>
 </div>
-</div>
+
+
+<!-- Forma del ejemplo -->
+<!-- 
+<form [formGroup]="publish" (ngSubmit)="addPublish()">
+  <p>Imagen</p>
+  <input #image type="text" formControlName="image">
+  <p>Texto</p>
+  <input #description type="text" formControlName="description">
+
+  <button type="submit" [disabled]="!publish.valid">
+    Publicar
+  </button>
+</form>
+<p>
+  {{publish.value | json}}
+  {{publish.status}}
+  {{publish.get('title').errors | json}}
+</p>
+
+-->
