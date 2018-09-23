@@ -4,34 +4,16 @@
   margin-top: 10px;
 }
 
-.btn-logout {
-  margin-left: 20px;
-  margin-right: 0px;
-  float: right;
-  position: relative;
-  right: 10px;
-  top: 0px;
-}
-
 .bienvenido {
   display: inline-block;
   margin-right: 0px;
   margin-bottom: 0px;
 }
 
-.left {
-  float: left;
-}
-
 .right {
-  float: right;
   position: relative;
   left: 3%;
   top: 10px;
-}
-
-.center {
-  display: inline-block;
 }
 
 .container {

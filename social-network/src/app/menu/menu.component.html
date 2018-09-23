@@ -2,18 +2,36 @@
   <button class="menu" mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>more_vert</mat-icon>
   </button>
-  <mat-menu #menu="matMenu">
+  <mat-menu class="my-menu" #menu="matMenu">
     <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
-    </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voicemail</span>
+      <mat-icon><i class="material-icons">
+          pets
+      </i></mat-icon>
+      <span>Muro</span>
     </button>
     <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
+      <mat-icon><i class="material-icons">
+          pets
+      </i></mat-icon>
+      <span>Alimentación</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon><i class="material-icons">
+          pets
+      </i></mat-icon>
+      <span>Cuidados</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon><i class="material-icons">
+          pets
+      </i></mat-icon>
+      <span>Directorio Veterinario</span>
+    </button>
+    <button mat-menu-item (click)="onLogout()">
+      <mat-icon><i class="material-icons">
+          pets
+      </i></mat-icon>
+      <span>Cerrar sesión</span>
     </button>
   </mat-menu>
 </div>
